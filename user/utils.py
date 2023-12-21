@@ -11,9 +11,9 @@ from .secret import SECRET
 
 @session
 def create_user(username, password, session=None):
-    user = User()
-    user.useprname = username
-    user.password = password
+    user = User(username=username, password=password)
+    #user.useprname = username
+    #user.password = password
 
     session.add(user)
     try:
